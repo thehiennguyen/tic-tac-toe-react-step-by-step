@@ -6,7 +6,7 @@ name: Github Page Deployment Workflow
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   pull_request:
-    branches: [ master ]
+    branches: [master]
     types: [closed]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -31,11 +31,9 @@ jobs:
       # Try NPM run build
       - name: Try NPM run build
         run: npm run build
-          
-      - name: Deploy GitHub Page
-        uses: peaceiris/actions-gh-pages@v3
-	with:
-	  # Set an input directory for deployment.
-	  publish_dir: ./build # optional, default is public
-	  # If empty commits should be made to the publication branch
-	  #allow_empty_commit: # optional, default is false
+				
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
