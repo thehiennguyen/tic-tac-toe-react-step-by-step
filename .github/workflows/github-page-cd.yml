@@ -24,13 +24,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
           
-      # Try NPM install
-      - name: Try NPM install
-        run: npm install
-        
-      # Try NPM run build
-      - name: Try NPM run build
-        run: npm run build
+      # NPM install and build
+      - name: NPM install and build
+        run: | 
+          npm install
+          npm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.7
