@@ -10,7 +10,7 @@ on:
     types: [closed]
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  #workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -33,9 +33,9 @@ jobs:
         run: npm run build
           
       - name: Deploy GitHub Page
-				uses: peaceiris/actions-gh-pages@v3
-				with:
-					# Set an input directory for deployment.
-					publish_dir: ./build # optional, default is public
-					# If empty commits should be made to the publication branch
-					#allow_empty_commit: # optional, default is false
+        uses: peaceiris/actions-gh-pages@v3
+	with:
+	  # Set an input directory for deployment.
+	  publish_dir: ./build # optional, default is public
+	  # If empty commits should be made to the publication branch
+	  #allow_empty_commit: # optional, default is false
