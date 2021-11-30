@@ -31,7 +31,7 @@ jobs:
       # Try NPM run build
       - name: Try NPM run build
         run: npm run build
-				
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
